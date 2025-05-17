@@ -5,10 +5,11 @@ if (session_status() === PHP_SESSION_NONE) {
 ?>
 <!-- Navbar always at the very top -->
 <nav class="navbar navbar-expand-lg">
-  <img src="./public/gbulogo.png" alt="logo" style="width: 72px; height:auto; background:transparent; border:none; margin-right:18px; margin-left:18px;"/>
+<img src="./public/gbulogo.png" alt="logo" style="width: 72px; height:auto; background:transparent; border:none; margin-right:0; margin-left:18px;"/>
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="./">
-      <span style="font-weight:800; color:#00b894; font-size:2rem; letter-spacing:1.5px;">Discuss Project</span>
+    <a class="navbar-brand d-flex align-items-end" href="./" style="align-items: flex-end; line-height:1;">
+      <span style="font-weight:800; font-size:2rem; letter-spacing:1.5px; color:#fff; line-height:1;">GBUians </span>
+      <span class="navbar-brand-highlight" style="font-weight:900; font-size:2.9rem; letter-spacing:0px; color:#e53935; vertical-align:baseline; line-height:1;">Q</span><span style="font-weight:800; font-size:2rem; letter-spacing:1.5px; color:#fff; line-height:1;">UORA</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

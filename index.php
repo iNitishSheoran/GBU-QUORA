@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Discuss Project</title>
+   <title>GBUians QUORA</title>
 
    <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -37,9 +37,7 @@
             <!-- Dramatic animated image 1: floating, right side -->
             <img src="./public/img1.jpg" alt="Welcome" class="banner-image-animated" loading="lazy" />
             <!-- Dramatic animated image 2: parallax, left side, blurred glass reflection -->
-            <div class="banner-image-parallax-wrapper">
-               <img src="./public/img2.jpg" alt="Inspiration" class="banner-image-parallax" loading="lazy" />
-            </div>
+            
             <!-- Animated SVG waves at the bottom -->
             <div class="animated-waves">
                <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
@@ -51,8 +49,8 @@
                   </path>
                </svg>
             </div>
-            <h1>Welcome to the Discussion Group</h1>
-            <p                    Share, learn, and grow together. Ask questions, find answers, and connect with your college.</p
+            <h1>Welcome to the <span class="navbar-brand-highlight" style="font-weight:800; font-size:2rem; letter-spacing:1.5px; color:#e53935;">GBUians QUORA</span> </h1>
+            <p>Your Unofficial Student HQ</p
          </div>';
       }
 

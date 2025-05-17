@@ -180,6 +180,9 @@ body {
     letter-spacing: 0.5px;
     transition: color 0.2s;
     font-size: 1.22rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .navbar .nav-link.active, .navbar .nav-link:hover {
     color: #00b894 !important;
@@ -189,8 +192,9 @@ body {
     width: 100px;
     height: 75px;
     object-fit: contain;
-    margin-right:  /* keep reduced margin */
-    transition: width 0.2s, height 0.2s;
+    margin-right:  0px/* keep reduced margin */
+    transition : width 0.2s, height 0.2s;
+    gap: 5px;
 }
 
 /* Equally space navbar links after brand */
