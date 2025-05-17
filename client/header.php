@@ -3,22 +3,21 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-
-   
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
+<!-- Navbar always at the very top -->
+<nav class="navbar navbar-expand-lg">
+  <img src="./public/gbulogo.png" alt="logo" style="width: 72px; height:auto; background:transparent; border:none; margin-right:18px; margin-left:18px;"/>
   <div class="container">
-   <img src="./public/untitled design2.png" alt="logo"style="width: 50px; height:auto; background-color:transparent; border:none;"/>
-    <a class="navbar-brand" href="./">
-     
+    <a class="navbar-brand d-flex align-items-center" href="./">
+      <span style="font-weight:800; color:#00b894; font-size:2rem; letter-spacing:1.5px;">Discuss Project</span>
     </a>
-
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link active" href="./">Home</a>
         </li>
-
         <?php if (isset($_SESSION['user']) && isset($_SESSION['user']['username'])): ?>
           <li class="nav-item">
             <a class="nav-link" href="./server/requests.php?logout=true">
@@ -39,16 +38,15 @@ if (session_status() === PHP_SESSION_NONE) {
             <a class="nav-link" href="?signup=true">SignUp</a>
           </li>
         <?php endif; ?>
-
         <li class="nav-item">
           <a class="nav-link" href="?latest=true">Latest Questions</a>
         </li>
       </ul>
+      <form class="d-flex ms-3" action="">
+        <input class="form-control me-2" name="search" type="search" placeholder="Search questions" style="min-width:180px;">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-
-    <form class="d-flex" action="">
-      <input class="form-control me-2" name="search" type="search" placeholder="Search questions">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
   </div>
 </nav>
+<!-- No extra margin or padding above nav -->
