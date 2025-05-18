@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - GBUQuora
+name: Build and deploy PHP app to Azure Web App - GbuQuora
 
 on:
   push:
@@ -48,10 +48,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
-
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
@@ -61,18 +58,11 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
       
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B4462CE6224B4DC89F49DB5991EE0F4F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_618213A91FE64D0BBF8AD0BEC86C2FEA }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_76986CEF8CFA4EE2940892C3D83CC711 }}
-
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'GBUQuora'
+          app-name: 'GbuQuora'
           slot-name: 'Production'
           package: .
-          
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FD6DB9C950764061A289BB7784E3B7FC }}
