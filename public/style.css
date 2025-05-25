@@ -70,12 +70,81 @@ body {
     }
 }
 @media (max-width: 600px) {
-    .welcome-banner {
-        padding: 12px 2vw;
-        font-size: 1rem;
-        margin: 0 0 12px 0;
-        border-radius: 24px;
-    }
+  .overlay {
+    padding-top: 10px;
+  }
+  .welcome-banner {
+    padding: 8px 2vw;
+    font-size: 0.98rem;
+    margin: 0 0 8px 0;
+    border-radius: 14px;
+    width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .welcome-banner h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .welcome-banner p {
+    font-size: 1rem;
+  }
+  .banner-image-animated {
+    width: 90vw !important;
+    max-width: 95vw !important;
+    height: auto !important;
+    margin: 12px auto 0 auto !important;
+    display: block !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    object-fit: cover !important;
+  }
+  .animated-orb {
+    width: 32vw !important;
+    height: 32vw !important;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 48px;
+    max-height: 48px;
+    left: 8vw !important;
+    top: 3vh !important;
+  }
+  .category-section {
+    max-width: 98vw !important;
+    padding: 10px 2vw 8px 2vw !important;
+    border-radius: 10px !important;
+  }
+  .content-wrapper {
+    padding: 6px 2vw !important;
+    margin-left: 0 !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+  }
+  .site-footer {
+    font-size: 0.98rem !important;
+    padding: 14px 0 8px 0 !important;
+  }
+  .site-footer img {
+    height: 28px !important;
+    border-radius: 7px !important;
+  }
+}
+@media (max-width: 400px) {
+  .banner-image-animated {
+    width: 98vw !important;
+    max-width: 99vw !important;
+    border-radius: 7px !important;
+  }
+  .welcome-banner h1 {
+    font-size: 1rem;
+  }
+  .category-section {
+    padding: 4px 1vw 4px 1vw !important;
+  }
+  .site-footer {
+    font-size: 0.9rem !important;
+    padding: 8px 0 2px 0 !important;
+  }
 }
 
 /* Animated gradient orbs */
@@ -192,9 +261,8 @@ body {
     width: 100px;
     height: 75px;
     object-fit: contain;
-    margin-right:  0px/* keep reduced margin */
-    transition : width 0.2s, height 0.2s;
-    gap: 5px;
+    margin-right: 0px; /* keep reduced margin */
+    transition: width 0.2s, height 0.2s;
 }
 
 /* Equally space navbar links after brand */
@@ -225,7 +293,23 @@ body {
         height: 48px;
     }
 }
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 4px;
+  }
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+  .navbar img {
+    width: 48px;
+    height: 36px;
+  }
+}
 
+/* Form elements in navbar */
 .navbar .form-control {
     border-radius: 8px;
     border: 1.5px solid #00b894;
@@ -611,7 +695,6 @@ select.form-control option, select.glass-input option, .auth-card select.form-co
         padding: 10px 0;
     }
 }
-
 @media (min-width: 1200px) {
   .question-details-row {
     position: relative;
@@ -630,7 +713,6 @@ select.form-control option, select.glass-input option, .auth-card select.form-co
     float: left;
   }
 }
-
 @media (max-width: 1199px) {
   .more-category-questions {
     position: static;
@@ -640,5 +722,154 @@ select.form-control option, select.glass-input option, .auth-card select.form-co
   .col-8 {
     width: 100%;
     float: none;
+  }
+}
+
+/* Responsive for mobile and small screens */
+@media (max-width: 600px) {
+  .overlay {
+    padding-top: 10px;
+  }
+  .welcome-banner {
+    padding: 8px 2vw;
+    font-size: 0.98rem;
+    margin: 0 0 8px 0;
+    border-radius: 14px;
+    width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .welcome-banner h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .welcome-banner p {
+    font-size: 1rem;
+  }
+  .banner-image-animated {
+    width: 90vw !important;
+    max-width: 95vw !important;
+    height: auto !important;
+    margin: 12px auto 0 auto !important;
+    display: block !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    object-fit: cover !important;
+  }
+  .animated-orb {
+    width: 32vw !important;
+    height: 32vw !important;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 48px;
+    max-height: 48px;
+    left: 8vw !important;
+    top: 3vh !important;
+  }
+  .category-section {
+    max-width: 98vw !important;
+    padding: 10px 2vw 8px 2vw !important;
+    border-radius: 10px !important;
+  }
+  .content-wrapper {
+    padding: 6px 2vw !important;
+    margin-left: 0 !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+  }
+  .site-footer {
+    font-size: 0.98rem !important;
+    padding: 14px 0 8px 0 !important;
+  }
+  .site-footer img {
+    height: 28px !important;
+    border-radius: 7px !important;
+  }
+}
+@media (max-width: 400px) {
+  .banner-image-animated {
+    width: 98vw !important;
+    max-width: 99vw !important;
+    border-radius: 7px !important;
+  }
+  .welcome-banner h1 {
+    font-size: 1rem;
+  }
+  .category-section {
+    padding: 4px 1vw 4px 1vw !important;
+  }
+  .site-footer {
+    font-size: 0.9rem !important;
+    padding: 8px 0 2px 0 !important;
+  }
+}
+
+/* --- Responsive image and layout improvements for mobile --- */
+@media (max-width: 600px) {
+  .banner-image-animated {
+    width: 90vw !important;
+    max-width: 95vw !important;
+    height: auto !important;
+    margin: 12px auto 0 auto !important;
+    display: block !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    object-fit: cover !important;
+  }
+  .welcome-banner {
+    padding: 8px 2vw;
+    font-size: 0.98rem;
+    margin: 0 0 8px 0;
+    border-radius: 14px;
+    width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .animated-orb {
+    width: 32vw !important;
+    height: 32vw !important;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 48px;
+    max-height: 48px;
+    left: 8vw !important;
+    top: 3vh !important;
+  }
+  .category-section {
+    max-width: 98vw !important;
+    padding: 10px 2vw 8px 2vw !important;
+    border-radius: 10px !important;
+  }
+  .content-wrapper {
+    padding: 6px 2vw !important;
+    margin-left: 0 !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+  }
+  .site-footer {
+    font-size: 0.98rem !important;
+    padding: 14px 0 8px 0 !important;
+  }
+  .site-footer img {
+    height: 28px !important;
+    border-radius: 7px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-image-animated {
+    width: 98vw !important;
+    max-width: 99vw !important;
+    border-radius: 7px !important;
+  }
+  .welcome-banner h1 {
+    font-size: 1rem;
+  }
+  .category-section {
+    padding: 4px 1vw 4px 1vw !important;
+  }
+  .site-footer {
+    font-size: 0.9rem !important;
+    padding: 8px 0 2px 0 !important;
   }
 }

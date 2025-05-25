@@ -13,6 +13,44 @@
 
    <!-- Custom Styling -->
    <link rel="stylesheet" href="./public/style.css">
+   <style>
+   @media (max-width: 600px) {
+      header.navbar, .navbar {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         z-index: 1000;
+         border-radius: 0;
+         box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      }
+      .navbar .navbar-brand {
+         font-size: 1.1rem;
+         padding: 6px 0;
+      }
+      .navbar-nav {
+         flex-direction: column;
+         align-items: flex-start;
+         width: 100%;
+         background: rgba(34,34,34,0.98);
+         padding: 8px 0;
+         margin: 0;
+      }
+      .navbar .nav-link {
+         font-size: 1rem;
+         padding: 8px 16px;
+         width: 100%;
+         text-align: left;
+      }
+      .navbar img {
+         width: 40px;
+         height: 32px;
+      }
+      body {
+         padding-top: 60px !important;
+      }
+   }
+   </style>
 </head>
 
 <body>
@@ -35,7 +73,7 @@
             <div class="animated-orb orb4"></div>
             <div class="animated-orb orb5"></div>
             <!-- Dramatic animated image 1: floating, right side -->
-            <img src="./public/img1.jpg" alt="Welcome" class="banner-image-animated" loading="lazy" />
+            <img src="./public/img1.jpg" alt="Welcome" class="banner-image-animated" loading="lazy" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:12px;object-fit:cover;" />
             <!-- Category/Link to Footer -->
             <div class="category-section" style="position:relative;margin:32px auto 0 auto;max-width:420px;background:rgba(255,255,255,0.13);backdrop-filter:blur(8px);border-radius:18px;padding:18px 28px 14px 28px;box-shadow:0 4px 24px 0 rgba(0,0,0,0.10);font-family:\'Poppins\',sans-serif;text-align:center;overflow:hidden;">
                <img src="./public/amazonvoucher.jpg" alt="Amazon Voucher" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.32;z-index:0;border-radius:18px;pointer-events:none;filter:brightness(0.92) blur(2px);" loading="lazy" />
